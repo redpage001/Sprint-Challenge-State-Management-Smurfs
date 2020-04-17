@@ -28,15 +28,8 @@ function App() {
          })
   }, [])
 
-  const deleteSmurf = smurf => {
-    axios.delete(`http://localhost:3333/smurfs/${smurf.id}`)
-         .then(response =>{
-           setSmurfs(response.data)
-         })
-  }
-
   return (
-    <SmurfContext.Provider value = {{ smurfs, addSmurf, deleteSmurf }}>
+    <SmurfContext.Provider value = {{ smurfs, addSmurf }}>
       <SmurfList />
       <SmurfForm />
     </SmurfContext.Provider>

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import { nextId } from "react-id-generator";
 
 import { SmurfContext } from "../context/SmurfContext";
 
@@ -35,8 +34,9 @@ const SmurfForm = props => {
     }
 
     return(
-        <div>
+        <div className="formContainer">
             <form>
+                <h1>New Smurf</h1>
                 <input 
                     name="name"
                     type="text"
